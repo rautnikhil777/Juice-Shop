@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Road Juice Corner - ताज़ा फलों का रस</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #38b2ac 0%, #48bb78 50%, #68d391 100%);
+        }
+        
+        .juice-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .juice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .fresh-orange {
+            background: linear-gradient(45deg, #f6ad55, #ed8936);
+        }
+        
+        .tropical-green {
+            background: linear-gradient(45deg, #48bb78, #38a169);
+        }
+        
+        .berry-blush {
+            background: linear-gradient(45deg, #ed64a6, #d53f8c);
+        }
+        
+        .citrus-splash {
+            background: linear-gradient(45deg, #f6e05e, #ecc94b);
+        }
+        
+        .watermelon-cool {
+            background: linear-gradient(45deg, #fc8181, #f56565);
+        }
+        
+        .pineapple-burst {
+            background: linear-gradient(45deg, #ecc94b, #d69e2e);
+        }
+        
+        .animated-bg {
+            animation: gradientShift 8s ease infinite;
+            background-size: 400% 400%;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-green-600">
+                        <i class="fas fa-glass-cheers mr-2"></i>
+                        Fresh Road Juice
+                    </span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-green-600 transition">होम</a>
+                    <a href="#menu" class="text-gray-700 hover:text-green-600 transition">मेनू</a>
+                    <a href="#about" class="text-gray-700 hover:text-green-600 transition">अबाउट</a>
+                    <a href="#contact" class="text-gray-700 hover:text-green-600 transition">संपर्क</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-green-600">होम</a>
+            <a href="#menu" class="block py-2 text-gray-700 hover:text-green-600">मेनू</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-green-600">अबाउट</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-green-600">संपर्क</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        ताज़ा फलों का <br>शुद्ध रस
+                    </h1>
+                    <p class="text-xl mb-8 opacity-90">
+                        प्रतिदिन ताज़े फलों से निकाला गया 100% शुद्ध रस। सेहत और स्वाद का परफेक्ट कॉम्बिनेशन।
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#menu" class="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">
+                            मेनू देखें
+                        </a>
+                        <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-green-600 transition">
+                            ऑर्डर करें
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="animated-bg rounded-2xl p-8">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a648d275-aa90-4269-8f1e-4590686739d0.png" alt="Colorful assortment of fresh fruit juices in transparent glasses with fruits arranged around them on a wooden table" class="w-full h-auto rounded-xl shadow-2xl" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lemon text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">ताज़े फल</h3>
+                    <p class="text-gray-600">रोज सुबह मार्केट से ताज़े फल लाए जाते हैं</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-blender text-3xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">हेल्थी रस</h3>
+                    <p class="text-gray-600">बिना प्रिज़र्वेटिव के शुद्ध और हेल्थी जूस</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Quick Service</h3>
+                    <p class="text-gray-600">2 मिनट में तैयार होता है आपका फेवरेट जूस</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">हमारा मेनू</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">ताज़े फलों से बने हमारे स्पेशल जूस की लिस्ट</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Juice 1 -->
+                <div class="juice-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 fresh-orange flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a424261d-a2ab-4be2-8b81-8d4c14b0ab0d.png" alt="Fresh orange juice in a tall glass with orange slices and mint leaves garnish" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">ऑरेंज जूस</h3>
+                        <p class="text-gray-600 mb-4">ताज़े संतरे से बना मीठा और टेंगी जूस</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">₹80</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+                                ऑर्डर करें
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Juice 2 -->
+                <div class="juice-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 tropical-green flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/723cc2a3-9a04-4fe7-9b59-c737a30a82ce.png" alt="Green tropical juice with kiwi, pineapple and mint in a glass bottle" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">ट्रॉपिकल ग्रीन</h3>
+                        <p class="text-gray-600 mb-4">कीवी, पाइनएप्पल और पुदीने का हेल्थी मिक्स</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">₹120</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+                                ऑर्डर करें
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Juice 3 -->
+                <div class="juice-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 berry-blush flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5094a24e-9ecb-47af-b97d-e54a4c0d873d.png" alt="Berry blend juice with strawberries, blueberries and raspberries in a fancy glass" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">बेरी ब्लेंड</h3>
+                        <p class="text-gray-600 mb-4">स्ट्रॉबेरी, ब्लूबेरी और रास्पबेरी का रंगीन मिक्स</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">₹150</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+                                ऑर्डर करें
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Juice 4 -->
+                <div class="juice-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 citrus-splash flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2fbd6470-b33c-48dc-89c8-546aba7fb57f.png" alt="Citrus mix juice with oranges, lemons and grapefruit in a large jug with ice" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">सिट्रस स्प्लैश</h3>
+                        <p class="text-gray-600 mb-4">ऑरेंज, लेमन और ग्रेपफ्रूट का रिफ्रेशिंग मिक्स</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">₹100</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+                                ऑर्डर करें
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Juice 5 -->
+                <div class="juice-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 watermelon-cool flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/95a601b8-abd4-422a-b337-84c80d29decc.png" alt="Refreshing watermelon juice with mint leaves in a tall glass with watermelon slice garnish" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">वॉटरमेलन कूल</h3>
+                        <p class="text-gray-600 mb-4">ठंडा तरबूज का रस पुदीने के साथ</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">₹90</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+                                ऑर्डर करें
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Juice 6 -->
+                <div class="juice-card bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 pineapple-burst flex items-center justify-center">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d19a7b89-d798-4000-ab88-5c384e2aa41e.png" alt="Golden pineapple juice served in a pineapple shell with tropical flowers decoration" class="w-full h-full object-cover" onerror="this.style.display='none'">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">पाइनएप्पल बर्स्ट</h3>
+                        <p class="text-gray-600 mb-4">ताज़े अनानास का मीठा और टेंगी जूस</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-600">₹110</span>
+                            <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+                                ऑर्डर करें
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/87c16260-3c7d-4fb2-b5c7-96d20c2339e7.png" alt="Modern juice bar counter with fresh fruits display and professional juicing equipment" class="w-full rounded-2xl shadow-xl" onerror="this.style.display='none'">
+                </div>
+                
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">हमारी कहानी</h2>
+                    <p class="text-gray-600 mb-6">
+                        2015 से, Fresh Road Juice Corner लोगों को ताज़े और हेल्थी जूस पिला रहा है। 
+                        हमारा मकसद है लोगों तक शुद्ध और प्रिज़र्वेटिव-फ्री जूस पहुँचाना।
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        हम रोज सुबह लोकल मार्केट से ताज़े फल लाते हैं और ग्राहकों के सामने ही जूस तैयार करते हैं।
+                        कोई भी प्रिज़र्वेटिव या एडेड शुगर नहीं - बस शुद्ध फलों का रस।
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <div class="text-3xl font-bold text-green-600">5000+</div>
+                            <div class="text-gray-600">Happy Customers</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-green-600">8+</div>
+                            <div class="text-gray-600">Years Experience</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-green-600">15+</div>
+                            <div class="text-gray-600">Juice Varieties</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-green-600">100%</div>
+                            <div class="text-gray-600">Fresh Fruits</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">ग्राहकों की राय</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">हमारे ग्राहक क्या कहते हैं हमारे जूस के बारे में</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-green-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">राजेश शर्मा</h4>
+                            <p class="text-green-600">Regular Customer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "सबसे अच्छा ऑरेंज जूस यहीं मिलता है। रोज ऑफिस जाते समय पीता हूँ। ताज़गी बनी रहती है पूरे दिन।"
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h
+                      
